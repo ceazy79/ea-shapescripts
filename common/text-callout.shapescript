@@ -1,0 +1,18 @@
+// Based on https://github.com/GeertBellekens/Enterprise-Architect-Shapescript-Library/blob/master/Whiteboard/diamond.shapeScript
+// Used e.g. in combination with a Text Element to annotate diagrams
+
+shape main{
+	noshadow=true;
+	v_align="center";
+	h_align="center";
+	fixedaspectratio=true;
+	defsize(20,20);
+	startpath();
+	ellipse(0,0,100,100);
+	endpath();
+	if(hastag("nofill","true"))
+		strokepath();
+	else
+		fillandstrokepath();
+	print("#NOTES#");
+}
